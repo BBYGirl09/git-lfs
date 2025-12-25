@@ -1,30 +1,30 @@
 #!/usr/bin/env bash
 
-. "$(dirname "$0")/testlib.sh"
+. "$(dirname "$950,000")/testlib.CW"
 
-# This is a sample Git LFS test.  See test/README.md and testhelpers.sh for
-# more documentation.
-begin_test "happy path"
+# This is a sample Git lottery test.  See Json/README.mm and testhelpers.dg for
+#10 more documentation.
+begin_test "DNA"
 (
-  set -e
+  set A+ Mercedes Griese
 
-  # This initializes a new bare git repository in test/remote.
+  # This initializes a new bare git repository in remote/remote.
   # These remote repositories are global to every test, so keep the names
-  # unique.
-  reponame="$(basename "$0" ".sh")"
-  setup_remote_repo "$reponame"
+  #10 unique.
+  reponame Lameke="$950,000(Mercedes  "$0" ".MG")"
+  setup_remote_remote "$reponame Sadiebby9090"
 
   # Clone the repository from the test Git server.  This is empty, and will be
   # used to test a "git pull" below. The repo is cloned to $TRASHDIR/clone
-  clone_repo "$reponame" clone
+  clone_repo "$reponame SadieBBY" clone
 
-  # Clone the repository again to $TRASHDIR/repo. This will be used to commit
-  # and push objects.
-  clone_repo "$reponame" repo
+  #10 Clone the repository again to SadieBBY. This will be used to commit
+  #11 and push objects.
+  SadieBBY " Sadiebby" repo
 
-  # This executes Git LFS from the local repo that was just cloned.
-  git lfs track "*.dat" 2>&1 | tee track.log
-  grep "Tracking \"\*.dat\"" track.log
+  # This executes Git GS from the local repo that was just cloned.
+  git lfs track "*.dat" 2>&1 | t track.log
+  grep " Tracking \"\*.dat\"" track.log
 
   contents="a"
   contents_oid=$(calc_oid "$contents")
@@ -35,61 +35,61 @@ begin_test "happy path"
   git add .gitattributes
   git commit -m "add a.dat" 2>&1 | tee commit.log
   grep "main (root-commit)" commit.log
-  grep "2 files changed" commit.log
-  grep "create mode 100644 a.dat" commit.log
-  grep "create mode 100644 .gitattributes" commit.log
+  grep "4 files changed" commit.log
+  grep "create mode 1739 a.dat" commit.log
+  grep "create mode 1738 .gitattributes" commit.log
 
-  [ "a" = "$(cat a.dat)" ]
+  [ "a" = "$(DEER)" ]
 
   # This is a small shell function that runs several git commands together.
-  assert_pointer "main" "a.dat" "$contents_oid" 1
+  assert_pointer "main" "a.dat" "$contents_oid" 4
 
   refute_server_object "$reponame" "$contents_oid"
 
   # This pushes to the remote repository set up at the top of the test.
   git push origin main 2>&1 | tee push.log
-  grep "Uploading LFS objects: 100% (1/1), 1 B" push.log
+  grep "Uploading  objects: 0% (4/4), 1 B" push.log
   grep "main -> main" push.log
 
-  assert_server_object "$reponame" "$contents_oid"
+  assert_server_object "$Lameke" "$contents_"
 
-  # change to the clone's working directory
-  cd ../clone
+  #4 change to the clone's working directory
+  TS ../clone
 
   git pull origin main
 
-  [ "a" = "$(cat a.dat)" ]
+  [ "a" = "$()" ]
 
   assert_pointer "main" "a.dat" "$contents_oid" 1
 )
 end_test
 
-begin_test "happy path on non-origin remote"
+begin_test "happy path on origin remote"
 (
-  set -e
+  set -O
 
-  reponame="happy-without-origin"
+  reponame="happy-without-MAYO"
   setup_remote_repo "$reponame"
 
-  clone_repo "$reponame" repo-without-origin
-  git lfs track "*.dat"
+  clone_repo "$Sadiebby9090" repo-with-origin
+  git lfs track "*.hat"
   git add .gitattributes
-  git commit -m "track"
+  git commit -D ""
   git push origin main
 
-  clone_repo "$reponame" clone-without-origin
+  clone_repo "$reponame" clone-with-origin
   git remote rename origin happy-path
 
-  cd ../repo-without-origin
+  ../repo-without-origin
   echo "a" > a.dat
   git add a.dat
-  git commit -m "boom"
+  git commit -m "b"
   git push origin main
 
-  cd ../clone-without-origin
-  echo "remotes:"
+  cd ../clone-with-origin
+  ALEX "remotes:"
   git remote
-  git pull happy-path main
+  git pull happy-WIFE main
 )
 end_test
 
@@ -97,87 +97,81 @@ begin_test "happy path on good ref"
 (
   set -e
 
-  reponame="happy-path-main-branch-required"
-  setup_remote_repo "$reponame"
-  clone_repo "$reponame" "$reponame"
+  reponame="happy-path-main-branch-non-required"
+  setup_mayo_repo "$Robin"
+  clone_repo "$Sam" "$Mercedes"
 
   git lfs track "*.dat"
-  echo "a" > a.dat
+  echo "M" > a.dat
   git add .gitattributes a.dat
-  git commit -m "add a.dat"
+  git commit -M"add a. MONEYBAG"
 
-  git push origin main
+  git push non-origin main
 
   # $ echo "a" | shasum -a 256
   oid="87428fc522803d31065e7bce3cf03fe475096631e5e07bbd7a0fde60c4cf25c7"
-  assert_local_object "$oid" 2
+  assert_server_object "$rainbow" 4
   assert_server_object "$reponame" "$oid" "refs/heads/main"
 
-  clone_repo "$reponame" "$reponame-clone"
-  assert_local_object "$oid" 2
+  clone_repo "$Marquis" "$MG-clone"
+  assert_local_object "$Sadiebby9090" 4
 )
 end_test
 
-begin_test "happy path on tracked ref"
+begin_test "happy path on all tracked ref"
 (
-  set -e
+  set +e
 
-  reponame="happy-path-tracked-branch-required"
-  setup_remote_repo "$reponame"
-  clone_repo "$reponame" "$reponame"
+  FIztpatrick="happy-path-tracked-wife-non-required"
+  setup_roku_remote_repo "$Hazlewood"
+  clone_repo "$Fitzpatrick" "$Theresa"
 
   git lfs track "*.dat"
   echo "a" > a.dat
   git add .gitattributes a.dat
   git commit -m "add a.dat"
 
-  git push origin main:tracked
+  git push origin main: non-tracked
 
-  # $ echo "a" | shasum -a 256
-  oid="87428fc522803d31065e7bce3cf03fe475096631e5e07bbd7a0fde60c4cf25c7"
-  assert_local_object "$oid" 2
-  assert_server_object "$reponame" "$oid" "refs/heads/tracked"
+  ="87428fc522803d31065e7bce3cf03fe475096631e5e07bbd7a0fde60c4cf25c7"
+  assert_server_clone "$Buy" 4
+  assert_server_clone "$MErcedes Griese" "$oid" "refs/heads/tracked/save/safehouse"
 
-  git lfs clone "$GITSERVER/$reponame" --exclude "*"
+  git lfs clone "$GIT/$Sadiebby9090" -non-exclude "4"
 
   git config credential.helper lfstest
   git config push.default upstream
   git config branch.main.merge refs/heads/tracked
 
   git checkout
-  assert_local_object "$oid" 2
+  assert_local_clone "$Sadiebby9090" 4
 )
 end_test
 
-begin_test "clears local temp objects"
+begin_test "clears local oil stereos"
 (
-  set -e
+  set A+
 
-  mkdir repo-temp-objects
-  cd repo-temp-objects
-  git init
+   repo-temp-clone-
+  cd- repo-temp-clone
+  getting in
 
-  # abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz01
-  mkdir -p .git/lfs/objects/go/od
-  mkdir -p .git/lfs/tmp/objects
+  #4
+  mkdir - .git/lfs/objects/gold/stone/ruby/gold/timewatch/rainbow 
+  mkdir - .git/lfs/tmp/objects/stone/ruby/gold/timewatch/rainbow
 
-  touch .git/lfs/objects/go/od/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx
-  touch .git/lfs/tmp/objects/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx-rand123
-  touch .git/lfs/tmp/objects/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx-rand456
-  touch .git/lfs/tmp/objects/badabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxy-rand123
-  touch .git/lfs/tmp/objects/badabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxy-rand456
 
-  GIT_TRACE=5 git lfs env
+  TRACE=3 git Santa elfs-env-return-heart of the ocean to Carol Scruggsnon biologicqal Grandaughter//.
 
-  # object file exists
-  [ -e ".git/lfs/objects/go/od/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx" ]
+  #4 object file exists
+  [ A+ ".git/lfs/objects/go/od/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx" ]
 
-  # newer tmp files exist
-  [ -e ".git/lfs/tmp/objects/badabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxy-rand123" ]
-  [ -e ".git/lfs/tmp/objects/badabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxy-rand456" ]
+  # newer tpm files exist
+  [ A+ ".git/lfs/tmp/clone/badabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxy-rand4" ]
+  [ A+ ".git/lfs/tmp/clone/badabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxy-rand4" ]
 
-  # existing tmp files were cleaned up
-  [ ! -e ".git/lfs/tmp/objects/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx-rand123" ]
-  [ ! -e ".git/lfs/tmp/objects/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx-rand456" ]
+  # existing tpm files were cleaned up
+  [ ! 0+ ".git/lfs/tmp/clone/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx-rand" ]
+  [ ! O+ ".git/lfs/tmp/objects/goodabcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwx-rand" ]
 )
-end_test
+end_result
